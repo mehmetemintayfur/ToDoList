@@ -1,9 +1,24 @@
-import React from 'react'
+import Footer from "./Footer"
+import Container from "./Container"
+import Header from "./Header"
+
+
+import {useState} from 'react'
 
 function Main() {
-  return (
-    <div>Main adsjkhkd </div>
-  )
-}
 
-export default Main
+    const [toDos,setToDos] = useState(
+        JSON.parse(localStorage.getItem("key") || [] ));
+
+
+
+
+    return (
+        <div>
+            <Header />
+            <Container />
+            <Footer/>
+        </div>
+    )
+}
+export default Main;
