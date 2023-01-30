@@ -1,29 +1,47 @@
 import React from 'react'
 import { useState } from 'react';
+import { useContext } from 'react';
+import ListContext from '../../context/ListContext';
+import { Formik, Field, Form } from 'formik';
 
 
 function Header() {
     
-    const name = value.
-    const [form, useForm] = useState({name:"",});
+   // const name = value.
+    //const [form, useForm] = useState({name:"",});
 
-    const onChangeInput = ()=>{
+    //const onChangeInput = ()=>{               //<button onClick={() => {setList([...list,"sd"] ) }}> Add </button>
 
+    //}
+
+    const [list,setList] = useContext(ListContext)
+    
+    function addToTheList(){
+        setList([...list,"asd"])
     }
 
 
-    
     return (
-        <div>
+    <div>
             <h3>  To Do List </h3>
-            <input
-                placeholder="Please enter your To Do"
-                value={form.name}
+      <Formik
+      initialValues={{
+        addtask: '',
+      }}
+      onSubmit={async (values) => {
+        setList([...list,values.addtask])
+      }}
+    >
+       <Form>
+        <label htmlFor="addtask">Add a task</label>
+        <Field id="addtask" name="addtask" placeholder="Add a task" />
 
-            />
-            <button> Add </button>
+        <button type="submit">Submit</button>
+        </Form>
+      </Formik>
+            
 
-        </div>
+    </div>
     )
 }
 
