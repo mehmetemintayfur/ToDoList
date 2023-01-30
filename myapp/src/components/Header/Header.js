@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
-import {ReactCompenent as checkicon} from '../../assets/checkicon.svg'
-import {ReactCompenent as trashicon} from '../../assets/trashicon'
+import {v4 as uuidv4} from 'react-uuid'
+
 
 
 
@@ -9,10 +9,11 @@ function Header({ toDos, setToDos }) {
     
     
     
-    const [form, setForm] = useState({name: "", id: 1, check: false });
+    const [form, setForm] = useState({name: "", id: uuidv4(), check: false });
 
     const onChangeInput = (event)=>{               
         console.log(event.target.value);
+        form.name = event.target.value;
        
     }
 
