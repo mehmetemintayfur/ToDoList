@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Footer() {
+function Footer({ toDos, setToDos }) {
   return (
     <div>Footer</div>
   )
