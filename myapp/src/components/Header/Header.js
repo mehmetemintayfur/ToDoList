@@ -8,8 +8,8 @@ import { v4 as uuidv4 } from 'react-uuid'
 function Header({ toDos, setToDos }) {
 
 
-
-  const [form, setForm] = useState({ name: "", id: 0, check: false });
+  const length = toDos.length;
+  const [form, setForm] = useState({ name: "", id: length, check: false });
 
   const onChangeInput = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value })
@@ -26,14 +26,14 @@ function Header({ toDos, setToDos }) {
 
     setForm({
       ...form,
-      name: event.target.value,
+      name: '',
       check: false,
       id: form.id+1,
     })
 
     setToDos([...toDos, form])
     localStorage.setItem("key", JSON.stringify([...toDos, form]))
-
+   
 
   }
 

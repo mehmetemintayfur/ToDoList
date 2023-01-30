@@ -16,9 +16,9 @@ function Main() {
     return (
         <div>
     
-            <Header> toDos={toDos} setToDos={setToDos} </Header>
-            <Container> toDos={toDos} setToDos={setToDos} </Container>
-            <Footer> toDos={toDos} setToDos={setToDos} </Footer>
+            <Header toDos={toDos} setToDos={setToDos} />
+            <Container toDos={toDos} setToDos={setToDos} />
+            <Footer toDos={toDos} setToDos={setToDos} />
         
         </div>
     )
