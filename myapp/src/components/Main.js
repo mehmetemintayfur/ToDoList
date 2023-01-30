@@ -10,7 +10,8 @@ import PropTypes from 'prop-types'
 function Main() {
 
     const [toDos,setToDos] = useState(
-    JSON.parse(localStorage.getItem("key") || [] ));
+        JSON.parse(localStorage.getItem("key")) || [] 
+    );
 
     return (
         <div>

@@ -4,12 +4,12 @@ import uuid from 'react-uuid';
 
 function Container({ toDos, setToDos }) {
 
-
+  console.log(toDos);
   
   return (
     <div>
 
-      <div key={}>  
+     <div>  
 
 
 
