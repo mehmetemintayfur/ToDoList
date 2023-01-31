@@ -1,0 +1,26 @@
+.unCompleted {
+    text-decoration: none;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+body{
+    font-size: 20px;
+}
+
+#trash{
+    margin-left: 10px;
+}
+
+input{
+   height: 20px;
+   width: 220px;
+}
+
+button{
+    width: 65px;
+    height: 24px;
+    margin-left: 10px;
+}

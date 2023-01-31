@@ -1,0 +1,6 @@
+.toDos{
+    width: 20%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}

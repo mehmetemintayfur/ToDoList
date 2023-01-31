@@ -3,6 +3,7 @@ import Container from "./Container/Container"
 import Header from "./Header/Header"
 import { useState } from "react";
 import PropTypes from 'prop-types'
+import "./Main.css"
 
 
 
@@ -17,6 +18,7 @@ function Main() {
         <div>
     
             <Header toDos={toDos} setToDos={setToDos} />
+            <br/>
             <Container toDos={toDos} setToDos={setToDos} />
             <Footer toDos={toDos} setToDos={setToDos} />
         
