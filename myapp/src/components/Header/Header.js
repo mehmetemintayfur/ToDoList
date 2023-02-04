@@ -48,7 +48,7 @@ function Header({ toDos, setToDos }) {
           onChange={onChangeInput}
           placeholder='Enter the task'>
         </input>
-        <button> Add </button>
+        <button className="head"> Add </button>
       </form>
 
     </div>

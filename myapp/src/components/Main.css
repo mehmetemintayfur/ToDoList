@@ -19,8 +19,16 @@ input{
    width: 220px;
 }
 
-button{
+.head{
     width: 65px;
     height: 24px;
     margin-left: 10px;
+}
+
+.footer{
+    width: 145px;
+    height: 35px;
+    text-align: center;
+    justify-content: center;
+    margin: 5px;
 }
